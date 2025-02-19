@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamelWriterExercise", "CamelWriterExercise\CamelWriterExercise.csproj", "{81D3B4B0-32CC-4E8B-84A9-EC3DAFD2B1C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamelWriterSolution", "CamelWriterSolution\CamelWriterSolution.csproj", "{B5EA8FF4-8F06-4084-8C33-622C55D9AD99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DanishIslandExercise", "DanishIslandExercise\DanishIslandExercise.csproj", "{4A648F1D-7374-4BB9-BDC5-133F65BCB831}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DanishIslandSolution", "DanishIslandSolution\DanishIslandSolution.csproj", "{B99120D3-156A-4465-94B3-9D869344B937}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81D3B4B0-32CC-4E8B-84A9-EC3DAFD2B1C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81D3B4B0-32CC-4E8B-84A9-EC3DAFD2B1C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81D3B4B0-32CC-4E8B-84A9-EC3DAFD2B1C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81D3B4B0-32CC-4E8B-84A9-EC3DAFD2B1C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5EA8FF4-8F06-4084-8C33-622C55D9AD99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5EA8FF4-8F06-4084-8C33-622C55D9AD99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5EA8FF4-8F06-4084-8C33-622C55D9AD99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5EA8FF4-8F06-4084-8C33-622C55D9AD99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A648F1D-7374-4BB9-BDC5-133F65BCB831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A648F1D-7374-4BB9-BDC5-133F65BCB831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A648F1D-7374-4BB9-BDC5-133F65BCB831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A648F1D-7374-4BB9-BDC5-133F65BCB831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B99120D3-156A-4465-94B3-9D869344B937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B99120D3-156A-4465-94B3-9D869344B937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B99120D3-156A-4465-94B3-9D869344B937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B99120D3-156A-4465-94B3-9D869344B937}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

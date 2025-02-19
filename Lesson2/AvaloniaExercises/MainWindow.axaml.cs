@@ -19,22 +19,52 @@ public partial class MainWindow : Window
         var textBox = this.FindControl<TextBox>("Exercise2TextBox");
         var comboBox = this.FindControl<ComboBox>("Exercise2ComboBox");
         var outputTextBlock = this.FindControl<TextBlock>("OutputTextBlock");
+        var checkBox = this.FindControl<CheckBox>("checkBox");
 
-        string output = $"TextBox: {textBox.Text}, ComboBox: {comboBox.SelectionBoxItem}";
+        string output =
+            $"TextBox: {textBox.Text}, ComboBox: {comboBox.SelectionBoxItem}, CheckBox: {checkBox.IsChecked}";
+        
         outputTextBlock.Text = output;
     }
     
     private void Exercise3ShowImage_Click(object sender, RoutedEventArgs e)
     {
         var catRadioButton = this.FindControl<RadioButton>("CatRadioButton");
+        var dogRadioButton = this.FindControl<RadioButton>("DogRadioButton");
+        var birdRadioButton = this.FindControl<RadioButton>("BirdRadioButton");
         var animalImage = this.FindControl<Image>("AnimalImage");
 
         if (catRadioButton.IsChecked == true)
         {
-         
             animalImage.Source =  new Bitmap(AssetLoader.Open(new Uri("avares://AvaloniaExercises/Assets/cat.jpg")));
-
+        }
+        else if (dogRadioButton.IsChecked == true)
+        {
+            animalImage.Source = new Bitmap(AssetLoader.Open(new Uri("avares://AvaloniaExercises/Assets/dog.jpg")));
+        }
+        else if (birdRadioButton.IsChecked == true)
+        {
+            animalImage.Source = new Bitmap(AssetLoader.Open(new Uri("avares://AvaloniaExercises/Assets/bird.jpg")));
         }
      
+    }
+
+    private void AddNums_Click(object sender, RoutedEventArgs e)
+    {
+        var numOne = this.FindControl<TextBox>("NumOne");
+        var numTwo = this.FindControl<TextBox>("NumTwo");
+        var resultBox = this.FindControl<TextBox>("ResultBox");
+        
+        resultBox.Text = numOne.Text + numTwo.Text;
+    }
+
+    private void SubtractNums_Click(object sender, RoutedEventArgs e)
+    {
+        
+    }
+
+    private void MultiplyNums_Click(object sender, RoutedEventArgs e)
+    {
+        
     }
 }
