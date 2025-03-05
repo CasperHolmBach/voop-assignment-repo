@@ -2,5 +2,5 @@
 
 using DesignPatterns;
 
-MyClass instance1 = MyClass.GetInstance(10);
-instance1.PrintValue(); // Output: Value= 10
+MyClass instance = MyClass.GetInstance(10);
+instance.PrintValue();

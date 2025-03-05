@@ -16,7 +16,7 @@ public class MountainSet
         string fileName = "FrenchMountains.csv";
         using (StreamReader streamReader = new StreamReader(fileName))
         {
-            for (int i = 0; i < 6; i++)
+            while(!streamReader.EndOfStream)
             {
                 string line = streamReader.ReadLine();
                 string[] lineArray = line.Split(";");
@@ -37,5 +37,11 @@ public class MountainSet
     public void PrintMountains()
     { 
         Console.WriteLine("[" + string.Join("\n, ", set) + "]");
+    }
+
+    public ISet<Mountain> SortByRange(IComparer<Mountain> comparer)
+    {
+        ISet<Mountain> rangeSet = new SortedSet<Mountain>(set, comparer);
+        return rangeSet;
     }
 }

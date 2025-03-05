@@ -2,7 +2,7 @@
 
 public class MyClass
 {
-    private static MyClass? _instance;
+    private static MyClass instance;
     private int _value;
 
     private MyClass(int value)
@@ -10,13 +10,14 @@ public class MyClass
         _value = value;
     }
 
-    public static MyClass getInstance(int value)
+    public static MyClass GetInstance(int value)
     {
-        if (_instance == null)
+        if(instance == null)
         {
-            _instance = new MyClass(value);
+            instance = new MyClass(value);
         }
-        return _instance;
+
+        return instance;
     }
 
     public void PrintValue()

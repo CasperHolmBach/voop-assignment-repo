@@ -2,12 +2,11 @@ namespace French_Mountains;
 
 public class Mountain : IComparable<Mountain>
 {
-    public string name;
-    public int height;
-    public int prominence;
-    public string latitude;
-    public string longitude;
-    public string range;
+    private string name;
+    private int height;
+    private int prominence;
+    private string latitude;
+    private string longitude;
     
     public Mountain(string name, int height, int prominence, string latitude, string longitude, string range)
     {
@@ -16,9 +15,11 @@ public class Mountain : IComparable<Mountain>
         this.prominence = prominence;
         this.latitude = latitude;
         this.longitude = longitude;
-        this.range = range;
+        Range = range;
     }
-
+    
+    public string Range { get; private set; }
+    
     public int GetHeight()
     {
         return height;
@@ -31,12 +32,12 @@ public class Mountain : IComparable<Mountain>
     
     public override string ToString()
     {
-        return $"Name: {name} \n" +
-               $"Height: {height} \n" +
-               $"Prominence: {prominence} \n" +
-               $"Latitude: {latitude} \n" +
-               $"Longitude: {longitude} \n" +
-               $"Range: {range}";
+        return $"Name: {name} " +
+               $"Height: {height} " +
+               $"Prominence: {prominence} " +
+               $"Latitude: {latitude} " +
+               $"Longitude: {longitude} " +
+               $"Range: {Range} ";
     }
 
     public int CompareTo(Mountain? o)

@@ -1,6 +1,4 @@
-﻿using Facade.Interfaces;
-
-namespace Facade;
+﻿namespace Facade;
 
 
     public class Engine : IEngine
@@ -10,4 +8,12 @@ namespace Facade;
         public void Accelerate() { Console.WriteLine("Engine Accelerated."); }
         public void Decelerate() { Console.WriteLine("Engine Decelerated."); 
         }
+    }
+
+    public interface IEngine
+    {
+        public void Start();
+        public void Stop();
+        public void Accelerate();
+        public void Decelerate();
     }
