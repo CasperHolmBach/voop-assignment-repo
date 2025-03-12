@@ -8,13 +8,11 @@
    
     <TabControl>
         <TabItem Header="Exercise 1">
-            <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*">
+            <Grid RowDefinitions="*,*" ColumnDefinitions="*,*">
                 <Rectangle Grid.Row="0" Grid.Column="0" Fill="Red"/>
                 <Rectangle Grid.Row="0" Grid.Column="1" Fill="Blue"/>
                 <Rectangle Grid.Row="1" Grid.Column="0" Fill="Green"/>
                 <Rectangle Grid.Row="1" Grid.Column="1" Fill="Yellow"/>
-                <Rectangle Grid.Row="2" Grid.Column="0" Fill="Bisque"/>
-                <Rectangle Grid.Row="2" Grid.Column="1" Fill="Aqua"/>
             </Grid>
         </TabItem>
 
@@ -26,7 +24,6 @@
                     <ComboBoxItem>Item 2</ComboBoxItem>
                     <ComboBoxItem>Item 3</ComboBoxItem>
                 </ComboBox>
-                <CheckBox Name="checkBox"></CheckBox>
                 <Button Content="Show Output" Click="Exercise2ShowOutput_Click"/>
                 <TextBlock Name="OutputTextBlock" TextWrapping="Wrap"/>
             </StackPanel>
@@ -36,40 +33,34 @@
             <StackPanel Margin="20" Spacing="10">
                 <TextBlock Text="Choose an animal:" />
                 <RadioButton GroupName="AnimalGroup" Name= "CatRadioButton" Content="Cat" IsChecked="True" />
-                <RadioButton GroupName="AnimalGroup" Name= "DogRadioButton" Content="Dog"/>
-                <RadioButton GroupName="AnimalGroup" Name= "BirdRadioButton" Content="Bird"/>
                 <Image Name="AnimalImage" Width="200" Height="200" /> 
                 <Button Content="Show Image" Click="Exercise3ShowImage_Click" />
             </StackPanel>
         </TabItem>
         
         <TabItem Header="Exercise 4">
-            <StackPanel Margin="20" Spacing="20">
-                
+            <StackPanel Spacing="10">
                 <Label>Enter two numbers:</Label>
                 
                 <StackPanel Orientation="Horizontal">
-                    <Label>Number 1:</Label>
-                    <TextBox Name="NumOne" HorizontalAlignment="Right"></TextBox>
+                    <Label>Number one: </Label>
+                    <TextBox Name="inputOne"></TextBox>
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal">
-                    <Label>Number 2:</Label>
-                    <TextBox Name="NumTwo" HorizontalAlignment="Right"></TextBox>
+                    <Label>Number two: </Label>
+                    <TextBox Name="inputTwo"></TextBox>
                 </StackPanel>
                 
-                <Label>Result:</Label>
+                <Label>Result: </Label>
+                <TextBox Name="resultBox"></TextBox>
                 
-                <TextBox Name="ResultBox"></TextBox>
-                
-                <StackPanel Spacing="10" Orientation="Horizontal">
-                    <Button Name="AddButton">Add</Button>
-                    <Button Name="SubtractButton">Subtract</Button>
-                    <Button Name="MultiplyButton">Multiply</Button>
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <Button Click="OnAddClick">Add</Button>
+                    <Button Click="OnSubtractClick">Subtract</Button>
+                    <Button Click="OnMultiplyClick">Multiply</Button>
                 </StackPanel>
-                
             </StackPanel>
         </TabItem>
-        
     </TabControl>
 </Window>

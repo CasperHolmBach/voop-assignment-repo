@@ -1,4 +1,5 @@
 using System;
+using Avalonia.Animation;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Media.Imaging;
@@ -19,52 +20,52 @@ public partial class MainWindow : Window
         var textBox = this.FindControl<TextBox>("Exercise2TextBox");
         var comboBox = this.FindControl<ComboBox>("Exercise2ComboBox");
         var outputTextBlock = this.FindControl<TextBlock>("OutputTextBlock");
-        var checkBox = this.FindControl<CheckBox>("checkBox");
 
-        string output =
-            $"TextBox: {textBox.Text}, ComboBox: {comboBox.SelectionBoxItem}, CheckBox: {checkBox.IsChecked}";
-        
+        string output = $"TextBox: {textBox.Text}, ComboBox: {comboBox.SelectionBoxItem}";
         outputTextBlock.Text = output;
     }
     
     private void Exercise3ShowImage_Click(object sender, RoutedEventArgs e)
     {
         var catRadioButton = this.FindControl<RadioButton>("CatRadioButton");
-        var dogRadioButton = this.FindControl<RadioButton>("DogRadioButton");
-        var birdRadioButton = this.FindControl<RadioButton>("BirdRadioButton");
         var animalImage = this.FindControl<Image>("AnimalImage");
 
         if (catRadioButton.IsChecked == true)
         {
+         
             animalImage.Source =  new Bitmap(AssetLoader.Open(new Uri("avares://AvaloniaExercises/Assets/cat.jpg")));
-        }
-        else if (dogRadioButton.IsChecked == true)
-        {
-            animalImage.Source = new Bitmap(AssetLoader.Open(new Uri("avares://AvaloniaExercises/Assets/dog.jpg")));
-        }
-        else if (birdRadioButton.IsChecked == true)
-        {
-            animalImage.Source = new Bitmap(AssetLoader.Open(new Uri("avares://AvaloniaExercises/Assets/bird.jpg")));
+
         }
      
     }
 
-    private void AddNums_Click(object sender, RoutedEventArgs e)
+    private void OnAddClick(object sender, RoutedEventArgs e)
     {
-        var numOne = this.FindControl<TextBox>("NumOne");
-        var numTwo = this.FindControl<TextBox>("NumTwo");
-        var resultBox = this.FindControl<TextBox>("ResultBox");
+        var numOne = int.Parse(inputOne.Text);
+        var numTwo = int.Parse(inputTwo.Text);
         
-        resultBox.Text = numOne.Text + numTwo.Text;
+        int result = numOne + numTwo;
+        
+        resultBox.Text = result.ToString();
     }
 
-    private void SubtractNums_Click(object sender, RoutedEventArgs e)
+    private void OnSubtractClick(object sender, RoutedEventArgs e)
     {
+        var numOne = int.Parse(inputOne.Text);
+        var numTwo = int.Parse(inputTwo.Text);
         
+        int result = numOne - numTwo;
+        
+        resultBox.Text = result.ToString();
     }
 
-    private void MultiplyNums_Click(object sender, RoutedEventArgs e)
+    private void OnMultiplyClick(object sender, RoutedEventArgs e)
     {
+        var numOne = int.Parse(inputOne.Text);
+        var numTwo = int.Parse(inputTwo.Text);
         
+        int result = numOne * numTwo;
+        
+        resultBox.Text = result.ToString();
     }
 }

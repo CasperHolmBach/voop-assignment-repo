@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="AvaloniaExercise/MainWindow.axaml" value="AvaloniaExercise/AvaloniaExercise.csproj" />
+        <entry key="AvaloniaExercises/MainWindow.axaml" value="AvaloniaExercises/AvaloniaExercises.csproj" />
       </map>
     </option>
   </component>
