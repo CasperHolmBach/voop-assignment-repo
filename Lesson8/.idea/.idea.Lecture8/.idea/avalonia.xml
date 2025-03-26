@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Callback/App.axaml" value="Callback/Callback.csproj" />
+        <entry key="Callback/vop/MainWindow.axaml" value="Callback/Callback.csproj" />
+        <entry key="Callback_CircularBuffer/MainWindow.axaml" value="Callback_CircularBuffer/Callback_CircularBuffer.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Width="500" Height="450"
+        x:Class="FlashingText.MainWindow"
+        Title="FlashingText">
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel>
+                        <TextBlock Name="Title" FontWeight="Bold" FontSize="30">Swamp izzo!</TextBlock>
+                        <StackPanel Orientation="Horizontal">
+                                <Button Click="StartButton">Start</Button>
+                                <Button Click="StopButton">Stop</Button>
+                                
+                                <StackPanel Margin="90,0,0,0">
+                                        <RadioButton Click="RadioButton" GroupName="Speed" Name="slow">100ms</RadioButton>
+                                        <RadioButton Click="RadioButton" GroupName="Speed" Name="medium">200ms</RadioButton>
+                                        <RadioButton Click="RadioButton" GroupName="Speed" Name="fast">400ms</RadioButton>
+                                </StackPanel>
+                        </StackPanel>
+                </StackPanel>
+        </Grid>
+</Window>
