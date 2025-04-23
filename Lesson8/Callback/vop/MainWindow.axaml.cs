@@ -20,28 +20,38 @@ public partial class MainWindow : Window, ICallbackInterface
     {
         if (Equals(sender, ButtonStart))
         {
-            // Initialize the facade and start it.
-            // Handle access to the buttons
+            _facade = new FacadeWithCallback(this);
+            _facade.Run();
+            ButtonStart.IsEnabled = false;
+            ButtonStop.IsEnabled = true;
         }
         else
         {
-            // Stop the facade
+            _facade.Stop();
+            ButtonStart.IsEnabled = true;
+            ButtonStop.IsEnabled = false;
         }
     }
 
     public void UpdateMessage(string message)
     {
-        // This is the implementation of the CallBack. Remember to use the UI Thread!
-        // Set the message of the Label and check if the facade thread is alive.
+        Dispatcher.UIThread.Post(() =>
+        {
+            LabelInfo.Content = message;
+        });
+        
+        if (!_facade.FacadeThread.IsAlive)
+        {
+            ButtonHandler(ButtonStop, new KeyEventArgs());
+        }
     }
 
     public void UpdateImages(Image image1, Image image2)
     {
-        // Changes the pictures of the Images
-        // Dispatcher.UIThread.Post(() =>
-        // {
-        //     DieImage1.Source = image1.Source;
-        //     DieImage2.Source = image2.Source;
-        // });
+        Dispatcher.UIThread.Post(() =>
+        {
+            DieImage1.Source = image1.Source;
+            DieImage2.Source = image2.Source;
+        });
     }
 }

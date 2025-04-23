@@ -26,4 +26,19 @@
         <SubType>Code</SubType>
       </Compile>
     </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="resources\dice1.png" />
+      <AvaloniaResource Include="resources\dice1.png" />
+      <None Remove="resources\dice2.png" />
+      <AvaloniaResource Include="resources\dice2.png" />
+      <None Remove="resources\dice3.png" />
+      <AvaloniaResource Include="resources\dice3.png" />
+      <None Remove="resources\dice4.png" />
+      <AvaloniaResource Include="resources\dice4.png" />
+      <None Remove="resources\dice5.png" />
+      <AvaloniaResource Include="resources\dice5.png" />
+      <None Remove="resources\dice6.png" />
+      <AvaloniaResource Include="resources\dice6.png" />
+    </ItemGroup>
 </Project>
